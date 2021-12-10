@@ -1,0 +1,19 @@
+[{
+    "id": 1,
+    "actorName": "Tom Hardy",
+    "characterName": "Eddie Brock",
+    "Picture":"https://www.mycast.io/talent/tom-hardy/images/194356 ",
+    "yearOfBirth": "1977"
+}, {
+    "id": 2,
+    "actorName": "Riz Ahmed",
+    "characterName": "Carlton Drake",
+    "Picture":"https://www.mycast.io/talent/riz-ahmed/images/197920",
+    "yearOfBirth":"1982"
+}, {
+    "id": 3,
+    "actorName": "Reid Scott",
+    "characterName": "Dr.Dan Lewis",
+    "Picture": "https://www.mycast.io/talent/reid-scott/images/38166",
+    "yearOfBirth": "1977"
+}]

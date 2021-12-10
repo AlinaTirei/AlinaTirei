@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Venom-Let there be carnage </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+     <button id="add-celebrities">Add new</button>
+    <div class="container">
+        <div class="table-responsive">
+            <h1>Venom- Let there be carnage</h1>
+            <br />
+            <table class="table table-bordered table-striped" id="celebrities_table">
+                <tr>
+                    <th>ID</th>
+                    <th>actorName</th>
+                    <th>characterName</th>
+                    <th>Picture</th>
+                    <th>yearOfBirth</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    * {
+
+        margin: 0;
+
+        padding: 0;
+
+        font-family: arial;
+
+        box-sizing: border-box;
+
+    }
+
+    body {
+
+        height: 100vh;
+
+        display: grid;
+
+        place-items: center;
+
+        background: url();
+
+        background-position: initial;
+
+        background-size: 150% 200%;
+
+
+
+
+    }
+
+    table {
+
+        width: 200px;
+
+        box-shadow: -1px 12px 12px -6px rgba(0, 0, 0, 0.5);
+
+    }
+
+    table,
+    td,
+    th {
+
+        padding: 20px;
+
+        border: 1px solid rgb(255, 34, 34);
+
+        border-collapse: collapse;
+
+        text-align: center;
+
+
+
+    }
+
+    td {
+
+        font-size: 18px;
+
+    }
+
+    th {
+
+        background-color: rgb(163, 17, 17);
+
+        color: white;
+
+    }
+
+    tr:nth-child(odd) {
+
+        background-color: rgb(255, 255, 255);
+
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $.getJSON("celebrities.json", function (data) {
+            var celebrities_data = "";
+            $.each(data, function (key, value) {
+                celebrities_data += '<tr>';
+                celebrities_data += '<td>' + value.id + '</td>';
+                celebrities_data += '<td>' + value.actorName + '</td>';
+                celebrities_data += '<td>' + value.characterName + '</td>';
+                celebrities_data += '<td>' + value.Picture + '</td>';
+                celebrities_data += '<td>' + value.yearOfBirth + '</td>';
+                celebrities_data += '</tr>';
+            });
+            $('#celebrities_table').append(celebrities_data);
+
+        });
+    });
+</script>
